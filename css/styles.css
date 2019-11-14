@@ -1,0 +1,218 @@
+#page {
+    padding-top: 60px;
+}
+
+#footer{
+    border-top: 1px solid #e5e5e5;
+    margin-top: 25px;
+    padding: 15px 0 16px;
+}
+
+#content{
+    min-height: 400px;
+}
+
+#jstree{
+    margin-left: 0px;
+}
+
+.brand{
+    margin-right: 215px;
+    color: #006eb8 !important;
+}
+
+.margintop-5{
+    margin-top: 5px;
+}
+
+.margintop-10{
+    margin-top: 10px;
+}
+
+.margintop-15{
+    margin-top: 15px;
+}
+
+.marginright-10{
+    margin-right: 10px;
+}
+
+.marginright-5{
+    margin-right: 5px;
+}
+
+.marginbottom-5{
+    margin-bottom: 5px;
+}
+
+.marginleft-20{
+    margin-left: 20px;
+}
+
+.click-to-action{
+    cursor: pointer;
+}
+
+.compactCand{
+    margin-left: 0px !important;
+}
+
+.zindex{
+    z-index: 1000;
+}
+/* -- MBSTODO: fix anti-responsive - INIZIO -- */
+body{
+    min-width: 1154px !important;
+}
+.navbar-fixed-top{
+    min-width: 100% !important;
+    position: fixed !important;
+}
+navbar-inner{
+    min-width: 100% !important;   
+}
+.brand{
+    margin-right: 20px !important;
+}
+.row{
+    /*min-width: 1154px !important;*/
+}
+.span9{
+    width: 870px !important;
+    margin-left: 0 !important;
+    /*float: left !important;*/
+}
+.container{
+    width: 1144px !important;
+}
+[class*="span"]{
+        /*margin-left: 40px !important;*/
+    }
+
+	
+
+@media only screen and (max-width:1200px){
+    .checkbox{
+        margin-left: 110px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .navbar .nav.pull-right{
+        float: none !important;
+        margin-top: 3em;
+    }
+    .row{
+        margin-top: 1.3em;
+    }
+    .pull-right {
+        margin-top: 3em;
+    }
+
+}
+@media only screen and (max-width: 980px){
+    .checkbox{
+        margin-left: 218px;
+    }    
+}
+@media only screen and (max-width: 767px){
+    [class*="span"],.row-fluid [class*="span"] {
+    display: block;
+    float: left !important;
+    /*width: 100%;*/
+    margin-left: 40px !important;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+    .span9{
+/*        width: 870px !important;
+        min-width: 870px !important;*/
+        width: 50% !important;
+        float: left !important;
+        margin-left: 40px !important;
+        }
+    [class*="span"]{
+        margin-left: 40px !important;
+    }
+    #content h1{
+        margin-top: 1.5em;
+    }
+}
+
+/* -- MBSTODO: fix anti-responsive - FINE -- */
+
+#closeAll{
+    position: relative;
+    top: 20px;
+    float: right;
+}
+
+.stagingError{
+    background-color: red !important;
+    color: #fff !important;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/* -- Fra: custom css rules*/ 
+
+.button-column {
+	color: #0088cc;
+    text-decoration: none;
+}
+
+/* Messaggi flash */
+.flash-success {
+    color: green;
+    margin: 1.5em;
+}
+.flash-error {
+    color: red;
+    margin: 1.5em;
+}
+
+/* Barra pulsanti fixed bottom */
+.navbar-fixed-bottom .navbar-inner {
+    background-image: linear-gradient(to bottom, #fafafa, #f5f5f5) !important;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+.button-update {
+	margin-right: 20px;
+}
+
+/* Hero in view UpdateStato */
+.heroStoricoAppr {
+    background-color: #eeeeee;
+    border-radius: 6px;
+    color: inherit;
+    margin-bottom: 30px;
+}
+.heroStoricoAppr div {
+	padding: 20px;
+}
+
+/* Larghezza colonna sx delle view */
+.detail-view th {
+    text-align: left !important; 
+    width: 260px !important;
+}
+
+h1 {
+    margin-bottom: 0.8em !important;
+}
+
+/* Campi modificati */
+.changed {
+	font-weight: bold;
+	color: red;
+	margin-left: 1em;
+}
