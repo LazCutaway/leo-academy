@@ -34,7 +34,7 @@ return array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'admin',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','172.21.0.1'),
+			//'ipFilters'=>array('127.0.0.1','172.21.0.1'),
 		),
 		'srbac' => array(
 			'userclass' => 'User', //default: User 
@@ -106,10 +106,10 @@ return array(
 		),
 		'db'=>array(
 		    'class'=>'CDbConnection',
-		    'connectionString' => 'mysql:host=mysql_leonardo_test;dbname=leonardo',
+		    'connectionString' => 'mysql:host=localhost;dbname=leonardo',
 		    'emulatePrepare' => true,
 		    'username' => 'root',
-		    'password' => 'root',
+		    'password' => 'simone',
 		    'charset' => 'utf8',
 		    'enableParamLogging' => true,
 		    'enableProfiling' => true,
@@ -152,7 +152,7 @@ return array(
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params' => array(
-		'baseurl' => "http://localhost/mvpfluid",
+		'baseurl' => "http://localhost/leo-academy",
 		// this is used in contact page
 		'adminEmail' => '',		
 	),

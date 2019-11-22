@@ -80,15 +80,8 @@ class Employee extends CActiveRecord
 			'supervisor_email' => 'Supervisor Email',
 			'employeeType_id' => 'Employee Type',
 			'source_id' => 'Source',
-            'employeeType.description'=>'Tipo dipendente'
 		);
 	}
-
-	public function getEmployeetype(){
-	    if($this->employeeType) {
-            return $this->employeeType->description;
-        }
-    }
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.

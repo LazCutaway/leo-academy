@@ -49,13 +49,14 @@ return false;
         'courseType.description',
         'date',
         'slot',
+        'location.nome',
         /*
         'source_id',
         'courseType_id',
         'teacher_id',
         */
-        array(
-            'class' => 'bootstrap.widgets.TbButtonColumn',
-        ),
+//        array(
+//            'class' => 'bootstrap.widgets.TbButtonColumn',
+//        ),
     ),
 )); ?>

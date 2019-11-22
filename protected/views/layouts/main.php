@@ -51,6 +51,7 @@
 			'items' => array(
 			    array('label' => 'Dipendenti', 'icon' => 'icon-user', 'url' => array('/employee/admin')),
 			    array('label' => 'Corsi', 'icon' => 'icon-tags', 'url' => array('/course/admin')),
+                            array('label' => 'Sedi', 'icon' => 'icon-flag', 'url' => array('/location/admin')),
 			)
 		    ),		    
 		    array(

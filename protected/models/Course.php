@@ -60,6 +60,7 @@ class Course extends CActiveRecord
 			'courseType' => array(self::BELONGS_TO, 'Coursetype', 'courseType_id'),
 			'source' => array(self::BELONGS_TO, 'Source', 'source_id'),
 			'teacher' => array(self::BELONGS_TO, 'Teacher', 'teacher_id'),
+                        'location' => array(self::BELONGS_TO, 'Location', 'location_id'),
 		);
 	}
 
@@ -78,6 +79,7 @@ class Course extends CActiveRecord
 			'source_id' => 'Source',
 			'courseType_id' => 'Course Type',
 			'teacher_id' => 'Teacher',
+                        'location.nome' => 'Sede',
 		);
 	}
 

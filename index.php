@@ -1,5 +1,13 @@
 <?php
-
+//define('YII_ENABLE_ERROR_HANDLER', false);
+//define('YII_ENABLE_EXCEPTION_HANDLER', false);
+//
+//// Turn off all error reporting
+//// error_reporting(0);
+//
+//// Report all errors except E_NOTICE
+//// This is the default value set in php.ini
+//error_reporting(E_ALL ^ E_NOTICE);
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/yii/framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';
