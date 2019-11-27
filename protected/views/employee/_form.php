@@ -43,23 +43,7 @@
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'is_deleted'); ?>
-		<?php echo $form->textField($model,'is_deleted'); ?>
-		<?php echo $form->error($model,'is_deleted'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'last_edit_time'); ?>
-		<?php echo $form->textField($model,'last_edit_time'); ?>
-		<?php echo $form->error($model,'last_edit_time'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'supervisor_email'); ?>
-		<?php echo $form->textField($model,'supervisor_email',array('size'=>45,'maxlength'=>45)); ?>
-		<?php echo $form->error($model,'supervisor_email'); ?>
-	</div>
+	
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'employeeType_id'); ?>

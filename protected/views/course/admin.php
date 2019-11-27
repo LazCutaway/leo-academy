@@ -48,6 +48,12 @@ return false;
         'name',
         'courseType.description',
         'date',
+        'dateshow',
+       /* array (
+            'header'=> $data,
+            'value'=> '$data->dateshow'
+        ),
+        */
         'slot',
         'location.nome',
         /*

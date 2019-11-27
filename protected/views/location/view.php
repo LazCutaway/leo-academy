@@ -26,5 +26,24 @@ $this->menu=array(
 		'indirizzo',
 		'cap',
 		'citta',
+                array(
+                    'label'=>'lista corsi',
+                    'value'=> function($data){
+                            return $data->listacorsi;
+                    },
+                    'type'=> 'raw',
+                ),
+                'listacorsi',
+	),
+)); ?>
+
+<h2> Lista corsi </h2>
+<?php $this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'location-grid',
+	'dataProvider'=>$corsi->search($model->id),
+	'filter'=>$corsi,
+	'columns'=>array(
+		'name',
+		'date',		
 	),
 )); ?>

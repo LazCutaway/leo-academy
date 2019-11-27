@@ -48,6 +48,7 @@ class Location extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'courses' => array(self::HAS_MANY, 'Course', 'location_id'),
+                         
 		);
 	}
 
@@ -62,10 +63,32 @@ class Location extends CActiveRecord
 			'indirizzo' => 'Indirizzo',
 			'cap' => 'Cap',
 			'citta' => 'Citta',
+                        'listacorsi' => 'Lista corsi',
 		);
 	}
+        
+        public function getListacorsi(){
+            
+            $courses=$this->courses;
+            
+            $html= '<ul>';
+            
+            foreach($courses as $course){
+                
+               $nomecorso=$course->name;
+               $datacorso=$course->date;
+               
+               $html.= '<li>'.$nomecorso.' | '.$datacorso.'</li>';
+               
+            }
+            $html.= '</ul>';
+            
+            return $html;
+            
+            
+        }
 
-	/**
+        /**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 *
 	 * Typical usecase:

@@ -53,6 +53,7 @@ class LocationController extends Controller
 	{
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+                        'corsi'=>new Course('search'),
 		));
 	}
 

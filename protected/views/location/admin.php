@@ -50,6 +50,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'indirizzo',
 		'cap',
 		'citta',
+                array(
+                    'header'=>'Lista corsi',
+                    'value'=> function($data){
+                            return $data->listacorsi;
+                    },
+                    'type'=> 'raw',
+                ),
 		array(
 			'class'=>'CButtonColumn',
 		),

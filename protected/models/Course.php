@@ -39,7 +39,7 @@ class Course extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('protocol, name, date, source_id, courseType_id, teacher_id', 'required'),
-			array('slot, source_id, courseType_id, teacher_id', 'numerical', 'integerOnly'=>true),
+			array('slot, source_id, courseType_id, location_id, teacher_id', 'numerical', 'integerOnly'=>true),
 			array('protocol, name', 'length', 'max'=>45),
 			array('last_edit_time', 'safe'),
 			// The following rule is used by search().
@@ -80,6 +80,7 @@ class Course extends CActiveRecord
 			'courseType_id' => 'Course Type',
 			'teacher_id' => 'Teacher',
                         'location.nome' => 'Sede',
+                        
 		);
 	}
 
@@ -87,9 +88,34 @@ class Course extends CActiveRecord
 	public function getTeacher(){
 
 	    return $model->teacher->employee->surname;
-    }
+            }
+            
+            
+            public function getDateshow(){
+                
+                
+                $date = $this->date;
+//                
+//                DateTime::createFromFormat("y-m-d", $date);
+//                return $datetime->format("m/d/y");
+               
+                $data_array = explode('-', $date);
+                $data_reverse = array_reverse($data_array);
+                $data_implode = implode("/", $data_reverse);
+                return $data_implode;
+            }
+            
+            public function listaPerSede($idSede){
+                
+                $criteria=new CDbCriteria;
+                $criteria->compare('location_id',$idSede);
+                
+                return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+            }
 
-	/**
+            /**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 *
 	 * Typical usecase:
@@ -101,6 +127,7 @@ class Course extends CActiveRecord
 	 * @return CActiveDataProvider the data provider that can return the models
 	 * based on the search/filter conditions.
 	 */
+            
 	public function search()
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
