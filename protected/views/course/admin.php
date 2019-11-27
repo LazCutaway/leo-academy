@@ -48,6 +48,11 @@ return false;
         'name',
         'courseType.description',
         'date',
+  //      array(
+    //      'header' => 'data',
+      //    'value' => '$data->dateshow',
+      //  ),
+        'dateshow',
         'slot',
         'location.nome',
         /*

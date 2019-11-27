@@ -14,6 +14,7 @@ $this->menu=array(
 	array('label'=>'Delete Employee', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Employee', 'url'=>array('admin')),
 );
+
 ?>
 
 <h1>View Employee #<?php echo $model->id; ?></h1>

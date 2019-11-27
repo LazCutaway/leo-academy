@@ -37,37 +37,37 @@ return array(
 			//'ipFilters'=>array('127.0.0.1','172.21.0.1'),
 		),
 		'srbac' => array(
-			'userclass' => 'User', //default: User 
-			'userid' => 'id', //default: userid 
-			'username' => 'username', //default:username 
+			'userclass' => 'User', //default: User
+			'userid' => 'id', //default: userid
+			'username' => 'username', //default:username
 			'delimeter' => '@', //default:-
 			'debug' => true, //default :false
 			'pageSize' => 30, // default : 15
-			'superUser' => 'Authorizer', //default: Authorizer 
-			'css' => 'srbac.css', //default: srbac.css 
-			'layout' => 'application.views.layouts.main', //default: application.views.layouts.main,must be an existing alias 
+			'superUser' => 'Authorizer', //default: Authorizer
+			'css' => 'srbac.css', //default: srbac.css
+			'layout' => 'application.views.layouts.main', //default: application.views.layouts.main,must be an existing alias
 			'notAuthorizedView' => 'srbac.views.authitem.unauthorized', // default:srbac.views.authitem.unauthorized, must be an existing alias
 			'alwaysAllowed' => array(//default: array()
 			'SiteLogin', 'SiteLogout', 'SiteIndex', 'SiteAdmin',
 			'SiteError', 'SiteContact'),
-			'userActions' => array('Show', 'View', 'List'), //default: array() 
+			'userActions' => array('Show', 'View', 'List'), //default: array()
 			'listBoxNumberOfLines' => 15, //default : 10
-			'imagesPath' => 'srbac.images', // default: srbac.images 
+			'imagesPath' => 'srbac.images', // default: srbac.images
 			'imagesPack' => 'tango', //default: noia
-			'iconText' => true, // default : false 
+			'iconText' => true, // default : false
 			'header' => 'srbac.views.authitem.header', //default : srbac.views.authitem.header, must be an existing alias
 			'footer' => 'srbac.views.authitem.footer', //default: srbac.views.authitem.footer, must be an existing alias
 			'showHeader' => true, // default: false
-			'showFooter' => true, // default: false 
+			'showFooter' => true, // default: false
 			'alwaysAllowedPath' => 'srbac.components', // default: srbac.components, must be an existing alias
 		),
-		
+
 	),
 
 	// application components
 	'components'=>array(
 		'service' => array('class' => 'Service'),
-		'lov' => array('class' => 'ListOfValues'),		
+		'lov' => array('class' => 'ListOfValues'),
 		'clientScript' => array(
 			'scriptMap' => array(
 				'jquery.js' => false,
@@ -109,7 +109,7 @@ return array(
 		    'connectionString' => 'mysql:host=localhost;dbname=leonardo',
 		    'emulatePrepare' => true,
 		    'username' => 'root',
-		    'password' => 'simone',
+		    'password' => 'password',
 		    'charset' => 'utf8',
 		    'enableParamLogging' => true,
 		    'enableProfiling' => true,
@@ -154,6 +154,6 @@ return array(
 	'params' => array(
 		'baseurl' => "http://localhost/leo-academy",
 		// this is used in contact page
-		'adminEmail' => '',		
+		'adminEmail' => '',
 	),
 );
