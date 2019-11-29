@@ -20,6 +20,23 @@
 	<?php echo $form->textFieldRow($model,'courseType_id',array('class'=>'span5')); ?>
         
 	<?php echo $form->textFieldRow($model,'teacher_id',array('class'=>'span5')); ?>
+	<?php
+
+ 	$sedi =	Location::model()->findAll();
+	$elenco_sedi = [];
+	for($i = 0;$i < count($sedi); $i++) {
+		$nome_sede = $sedi[$i]->nome;
+		$id_sede = $sedi[$i]->id;
+		$elenco_sedi[$id_sede] = $nome_sede;
+	//	array_push($elenco_sedi, array($id_sede => $nome_sede));
+
+	}
+
+	// var_dump($sedi).die();
+
+	?>
+	<?php echo $form->dropDownList($model,'location_id',$elenco_sedi,array('class'=>'span5')); ?>
+
 
         <?php 
                 $sedi = Location::model()->findAll();
