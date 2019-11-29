@@ -55,5 +55,13 @@ class Service extends CApplicationComponent {
 
 		return $ret_array;
 	}
+
+    public function dateConversion($date)
+    {
+        $data_array = explode('-', $date);
+        $data_reverse = array_reverse($data_array);
+        $data_implode = implode("/", $data_reverse);
+        return $data_implode;
+    }
 	
 }

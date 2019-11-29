@@ -47,13 +47,14 @@ return false;
         'protocol',
         'name',
         'courseType.description',
-        'date',
-        'dateshow',
-       /* array (
-            'header'=> $data,
-            'value'=> '$data->dateshow'
+//        'date',
+        array(
+            'header' => 'Data',
+            'value' => function ($data) {
+                return Yii::app()->service->dateConversion($data->date);
+            },
+            'type' => 'raw',
         ),
-        */
         'slot',
         'location.nome',
         /*
@@ -61,8 +62,8 @@ return false;
         'courseType_id',
         'teacher_id',
         */
-//        array(
-//            'class' => 'bootstrap.widgets.TbButtonColumn',
-//        ),
+        array(
+            'class' => 'bootstrap.widgets.TbButtonColumn',
+        ),
     ),
 )); ?>
